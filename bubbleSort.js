@@ -1,1 +1,0 @@
-//Algrorithms are coming soon :)
