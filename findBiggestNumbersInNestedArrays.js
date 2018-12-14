@@ -19,7 +19,7 @@ function largest(arr){
 console.log(largest([[2, 4],[5, 6],[8, 9]]));
 
 //       2 solution
-function findMax(arr){
+function nest(arr){
   var biggest = arr[0];
   for(let i=0; i<arr.length; i++){
     if(arr[i]>biggest){
@@ -32,7 +32,7 @@ function findMax(arr){
 function largest(arr){
   var biggest = [];
   for(var i=0; i<arr.length; i++){
-    var innerFunc = findMax(arr[i]);
+    var innerFunc = nest(arr[i]);
     biggest.push(innerFunc);
   }
   return biggest;
