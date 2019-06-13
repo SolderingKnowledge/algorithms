@@ -1,16 +1,18 @@
+//reverse letters backwards
+// input=> "It is awesome"; output=> "tI si emosewa"
 function reverseWords(words) {
-  var splitted = words.split(" ");
-  var reversed = [];
+	var splitted = words.split(' ');
+	var reversed = [];
 
-  splitted.forEach(word => {
-    var reverse = "";
-    for (var j = word.length - 1; j >= 0; j--) {
-      reverse += word[j];
-    }
-    reversed.push(reverse);
-  });
+	splitted.forEach((word) => {
+		var reverse = '';
+		for (var j = word.length - 1; j >= 0; j--) {
+			reverse += word[j];
+		}
+		reversed.push(reverse);
+	});
 
-  return reversed.join(" ");
+	return reversed.join(' ');
 }
 
-reverseWords("It is awesome");
+reverseWords('It is awesome');
