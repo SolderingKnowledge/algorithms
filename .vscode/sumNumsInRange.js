@@ -12,4 +12,4 @@ const numsSum = (arr)=>{
     return sum;
 }
 
-numsSum([1,4]);
+numsSum([1,4]);//10
