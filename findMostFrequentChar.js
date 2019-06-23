@@ -19,3 +19,30 @@ function findMostFrequentChar(chars) {
 	return `${letter}, ${max}`;
 }
 findMostFrequentChar('HELLO');
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+const frequentChar = (str)=>{
+	const charMap = {};
+	let max = 0;
+	let maxChar = "";
+	for(let char of str){
+	  if(charMap[char]){
+		charMap[char]++;
+	  }
+	  else {
+		charMap[char]=1;
+	  }
+	}
+	for(let char in charMap){
+	  if(charMap[char]> max){//charMap[char](1)>max(1)
+		max = charMap[char];
+		maxChar = char;
+	  }
+	}
+	return `${maxChar}: ${max}`;
+  }
+  
+  frequentChar("Hello there");//output: "e: 3"
+  
+  
