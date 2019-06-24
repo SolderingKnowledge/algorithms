@@ -1,9 +1,8 @@
 //input => "hello" output => "Hello"
 
 function capitalizeFirstLetterOfWord(str) {
-	var splitted = str.split('');
-	var upperedFirst = splitted[0].toUpperCase();
-	splitted[0] = upperedFirst;
+	var splitted = str.split(''); //'hello'.['h','e','l','l','l','o']
+	splitted[0]=splitted[0].toUpperCase();//'h'.'H'
 	return splitted.join('');
 }
 capitalizeFirstLetterOfWord('hello');
