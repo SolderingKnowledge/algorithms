@@ -10,3 +10,13 @@ const penny = (money)=>{
   return result;
 }
 penny(193);// [ 3, 3, 1, 1, 1 ]
+
+
+
+/* 
+  solution approach:
+
+Divide money by the size of change
+
+
+*/

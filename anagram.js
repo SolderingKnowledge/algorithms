@@ -40,3 +40,9 @@ const anagram = (str1, str2)=>{
   anagram("tesla", 'least');
   
   
+
+
+  /*
+  solution approach:
+    Sort the given word and and assign value to each letter & compare the values & compare the length
+  */
