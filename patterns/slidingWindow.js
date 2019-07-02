@@ -24,7 +24,7 @@ const subset = (arr, num)=>{
     }
     temp = max;//7
     for(let i=num; i<arr.length; i++){
-      temp=temp-arr[i-num]+arr[i];//num=2; arr[i]=5; arr[i-num]+arr[i]//6
+      temp=temp-arr[i-num]+arr[i];//num=2; arr[i]=5; arr[i-num]+arr[i]//6 in another words subtract previous temp and add current temp that way you will keep sliding window  
       if(max < temp){
         max = temp;
       }
