@@ -45,4 +45,24 @@ const same =(arr1, arr2)=>{
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
+function highest(strings) {
+  const hash = {};
+  let max = 0;
+  let most = strings[0];
 
+  for(let i = 0; i < strings.length; i++) {
+      const current = strings[i];
+
+      hash[current]?hash[current]++:hash[current]=1;
+
+      if(hash[current] > max) {
+          max = hash[current];
+          most = current;//when we catch highest value then we assign current to most
+      }
+  }
+
+  return most;
+}
+
+
+highest(['a', 'b', 'c', 'a']);//a
