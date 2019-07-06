@@ -10,4 +10,4 @@ const bubble = (a)=>{
     }
     return a;
   }
-  bubble([4,3,2,1]);
+bubble([4,3,2,1]);
