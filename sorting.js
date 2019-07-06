@@ -1,17 +1,15 @@
 const selection=(a)=>{
     for(let i=0;i<a.length;i++){
-      let lowest =i;
+      let lowest =i;//right now it is just a current
       for(let j=i+1; j<a.length; j++){
         if(a[j]<a[i]){//if next one is smaller than current
-          lowest = j;
+          lowest = j;//reassign
         }
-        if(i!==j){
-          let temp =a[i];//swapping
-          a[i]=a[lowest];
-          a[lowest]=temp;
-        }
+        let temp =a[i];//swapping
+        a[i]=a[lowest];
+        a[lowest]=temp;
       }
     }
     return a;
-  }
-  selection([4,3,2,1]);
+}
+selection([4,3,2,1]);
