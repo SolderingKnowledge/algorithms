@@ -5,7 +5,7 @@ const getElementById= dom => {
         if(node.id === "true"){
             return node;
         }
-        for(let i=0; i<queue.children.length; i++){
+        for(let i=0; i<node.children.length; i++){
             queue.push(node.children[i]);
         }
     }
