@@ -28,7 +28,7 @@ const brackets = (str)=>{
     return stack.length === 0;//return true if stack is empty
   
   }
-  brackets('({()})')//true;
+  console.log(brackets('([({()})])'))//true;
   
   
   
