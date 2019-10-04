@@ -15,8 +15,6 @@ const islands = grid => {
     }
     return count;
   };
-  
-  
   const markIsland = (grid, x, y, visited) => {
     if(x < 0 || x > grid.length - 1 || y < 0 || y > grid[x].length - 1) {
         return;
@@ -33,7 +31,6 @@ const islands = grid => {
     markIsland(grid, x, y - 1, visited);
     markIsland(grid, x, y + 1, visited);
   };
-  
   islands([
     [1,1,0,0,1],
     [1,1,0,0,0],
@@ -41,13 +38,6 @@ const islands = grid => {
     [1,0,0,0,1],
     [1,0,0,1,1]
   ]);//output: 4
-
-
-
-
-
-
-  //////////////////////////////////////////////////////////////////////////////////////////
   //////////////////////////////////////////////////////////////////////////////////////////
   const islands = grid =>{
     let count = 0;
@@ -78,3 +68,42 @@ const islands = grid => {
     [1,1,0,0],
     [0,0,0,0],
   ])
+  ////////////////////////////////////
+  function numIslands (grid){ 
+    var count = 0;4    
+    for(var i = 0; i < grid.length; i++) {
+        for(var j = 0; j < grid[0].length; j++) {
+            if(grid[i][j] === 1) {
+                breadthFirst(i, j, grid);
+                count++;
+            }
+        }
+    }
+    
+    return count;
+};
+function breadthFirst(i, j, grid) {
+    var stack = [];
+    
+    stack.push([i, j]);
+    
+    while(stack.length) {
+        var pair = stack.pop();
+        i = pair[0];
+        j = pair[1];
+        
+        if(i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] === 1) {
+            grid[i][j] = 2;
+            stack.push([i + 1, j]);
+            stack.push([i - 1, j]);
+            stack.push([i, j + 1]);
+            stack.push([i, j - 1]);
+        }
+    }
+}
+  
+  console.log(breadthFirst([
+  [1,0,0,0],
+  [1,1,0,0],
+  [0,0,0,0],
+  ]));
