@@ -13,9 +13,9 @@ function isSingleMutation(str1, str2) {
             }
 
             if(str1.length > str2.length) {
-                j--;//the strings are now "lined up" untill the end
+                j--;//the strings are now lined up till the end
             } else if(str1.length < str2.length){
-                i--;//the strings are now "lined up" untill the end
+                i--;//the strings are now lined up till the end
             }
         }
     }
