@@ -18,9 +18,11 @@ const brackets = (str)=>{
         stack.push(str[i]);
       }
       else{//if current is closing char
-        let last = stack.pop();//delete from stack and take it
-        if(str[i] !== closed[last]){//if current is closing then compare is to last element in the stack which is opening char
-          return false;
+        if(closed[str[i]]){
+          let last = stack.pop();//delete from stack and take it
+          if(str[i] !== closed[last]){//if current is closing then compare is to last element in the stack which is opening char
+            return false;
+          }
         }
       }
   
@@ -28,7 +30,7 @@ const brackets = (str)=>{
     return stack.length === 0;//return true if stack is empty
   
   }
-  console.log(brackets('([({()})])'))//true;
+  console.log(brackets('([({(10-9)})])'))//true;
   
   
   
