@@ -16,6 +16,6 @@ switchInPlace([1,2,3,4,5,6]);//[6,5,4,3,2,1]
 
 
 /*
-solution approach:
-    start from the start element and from the ene element and start switching
+high level:
+    start from the current element and perform swap approach
 */
