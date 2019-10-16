@@ -32,14 +32,14 @@ high level:
 
 
 
-function convertToTitle(n) {
-    var result = '';
-    while (n) {
-        var code = String.fromCharCode( (n - 1) % 26 + 'A'.charCodeAt() );
-        n = Math.floor((n - 1) / 26);
-        result = code + result;
+function convertToTitle(num) {
+    let str = '';
+    while (num) {
+        let unicode = String.fromCharCode( (num - 1) % 26 + 'A'.charCodeAt() );
+        num = Math.floor((num - 1) / 26);
+        result = unicode + result;
     }
-    return result;
+    return str;
 };
 
 console.log(convertToTitle(1));//"A"
