@@ -110,6 +110,6 @@ console.log(islands([
 /*
 high level:
   We will go over the grid length and over nested array length and if we see land(1) we we will perform breadthFirstSearch(1right, 1left, 1up, 1down) 
-  and on this each round search we will keep track(counter)
+  and on this each round search we will keep track(count)
   how many rounds searches we did.
 */
