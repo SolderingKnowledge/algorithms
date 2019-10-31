@@ -1,6 +1,12 @@
 //adding given numbers to one another and find sum of numbers
 // input=> 125; output=> 8;
 
+
+/* 
+	
+
+
+*/
 function findSum(number) {
 	var result = 0;
 	while (number % 10 >= 1) {
