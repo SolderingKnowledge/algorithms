@@ -17,9 +17,8 @@ high level:
 
 
 function per(str, s){
-    const result = [];
-    const hash = {};
-    const arr = [str];
+    const result = [], hash = {}, arr = [str];
+    
     while(arr.length){
       let curr = arr.shift().split("");// [ 'a', '*', 'b', '*' ]
       for(let i=0; i<curr.length; i++){
