@@ -24,12 +24,12 @@ function per(str, s){
         for(let i=0; i<curr.length; i++){
         if(curr[i]=="*"){
              for(let j=0; j<s.length; j++){
-                curr[i]=s[j];//inserting
-                let c = curr.join("");
+                curr[i]=s[j];//replacing "*" to "c"
+                let c = curr.join("");//turning back to string;  [ 'a', 'c', 'b', '*' ]  => "acb*"
                 if(c.includes("*")){
-                    arr.push(c)
+                    arr.push(c)//"acb*"
                 }
-                 else if(!hash[c]){
+                 else if(!hash[c]){//making sure we don't insert duplicates
                     result.push(c);
                     hash[c]=true;
            }
