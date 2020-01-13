@@ -1,7 +1,7 @@
 //2 test cases 1)current is less than next one
 //             2) firt profit is bigger than any other profits
 
-const business = a =>{
+const business = a => {
   let profit = -1;
   let current = 0;
   let next = 0;
