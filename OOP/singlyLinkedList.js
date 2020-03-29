@@ -47,12 +47,12 @@ class SinglyLinkedList{
         this.tail = node;
 
         // var next = null;
-        // var prev = null; //=> next: null;
+        var prev = null; //=> next: null;
         for(let i = 0; i<this.length; i++){
             //swapping arrows next & prev
             var next = node.next;
             node.next = prev;
-            var prev = node;
+            prev = node;
             node = next;//next:undefined;
         }
         return this;
