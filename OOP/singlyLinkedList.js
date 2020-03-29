@@ -40,6 +40,23 @@ class SinglyLinkedList{
         }
         return current;
     }
+    reverse(){
+        //swapping the head & tail
+        var node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+
+        var next = null;
+        var prev = null;
+        for(let i = 0; i<this.length; i++){
+            //swapping arrows next & prev
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+        return this;
+    }
 }
 
 var ssl = new SinglyLinkedList();
