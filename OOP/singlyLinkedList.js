@@ -24,6 +24,22 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+    pop(){
+        var current = this.head;
+        var newTail = current;
+        while(current.next){
+            newTail = current;
+            current = current.next;//current.next.next.next;
+        }
+        this.tail = newTail;//prev node
+        this.tail.next = null;//removing node
+        this.length--;
+        if(this.length === 0){// edge case if there no node left
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
 }
 
 var ssl = new SinglyLinkedList();
