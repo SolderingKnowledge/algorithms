@@ -24,4 +24,6 @@ function parseCSV(str){
     return data;
 }
 
-parseCSV(csv);
+parseCSV(csv);//[ { GENDER: 'Male', ADDRESS: '123 Tacoma St', DOB: '01/01/1990', PROFESSION: 'Student', Name: 'John Doe' },    { GENDER: 'Male', ADDRESS: '949 Franklin ST', DOB: '02/05/1986',  PROFESSION: 'Doctor',  Name: 'John Smith' } ]
+
+
