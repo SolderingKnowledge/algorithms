@@ -1,40 +1,40 @@
-const matrix = (n)=>{
+function spiral(n){
     let results = [];
-    for(let i=0; i<n; i++){
-      results.push([]);
-    }
+     for(let i=0; i<n; i++){
+        results.push([]);
+     }
     let counter = 1;
-    let startColumn = 0;
-    let endColumn = n-1;
-    let startRow = 0;
-    let endRow = n-1;
-  
-    while(startColumn<=endColumn && startRow <= endRow){
+    let start = 0;
+    let end = n-1;
+    let top = 0;
+    let bottom = n-1;
+
+    while(start <= end && top <= bottom){
       //Top
-      for(let i=startColumn; i<=endColumn; i++){
-        results[startRow][i]=counter;
+      for(let i=start; i<=end; i++){
+        results[start][i]=counter;
         counter++;
       }
-      startRow++;
+      top++;
       //Right
-      for(let i= startRow; i<=endRow; i++){
-        results[i][endColumn]=counter;
+      for(let i= top; i<=bottom; i++){
+        results[i][end]=counter;
         counter++;
       }
-      endColumn--;
+      end--;
       //Bottom
-      for(let i=endColumn; i>=startColumn; i--){
-        results[endRow][i]= counter;
+      for(let i=end; i>=start; i--){
+        results[bottom][i]= counter;
         counter++;
       }
-      endRow--;
+      bottom--;
       //Middle
-      for(let i=endRow; i>=startRow; i--){
-        results[i][startColumn]=counter;
+      for(let i=bottom; i>=start; i--){
+        results[i][start]=counter;
         counter++;
       }
-    startColumn++;
+    start++;
       }
     return results;
-  }
-  matrix(5);
+}
+spiral(5);
