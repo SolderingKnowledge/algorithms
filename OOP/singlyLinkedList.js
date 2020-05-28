@@ -57,6 +57,7 @@ class SinglyLinkedList{
         }
         return this;
     }
+    // Do the reverse recursive way now
 }
 
 var ssl = new SinglyLinkedList();
