@@ -58,9 +58,11 @@ class SinglyLinkedList{
         return this;
     }
     // Do the reverse recursive way now
-    recursion(){
+    reverseRecursiveWay(){
         
     }
 }
 
 var ssl = new SinglyLinkedList();
+ssl.insert("first");
+console.log(ssl);
