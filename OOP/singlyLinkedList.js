@@ -64,5 +64,8 @@ class SinglyLinkedList{
 }
 
 var ssl = new SinglyLinkedList();
-ssl.insert("first");
+ssl.insert("1");
+ssl.insert("2");
+ssl.insert("3");
+ssl.reverse();
 console.log(ssl);
