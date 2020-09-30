@@ -14,8 +14,8 @@ class Car {
 }
 var nissan = new Car('Nissan', 'Altima', 2019);
 
-console.log(honda instanceof Car);//true
-console.log(honda instanceof Object);//true
+console.log(nissan instanceof Car);//true
+console.log(nissan instanceof Object);//true
 ```
 
 ### Summary:
