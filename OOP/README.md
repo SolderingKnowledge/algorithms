@@ -12,11 +12,11 @@ class Car {
         this.year = year;
     }
 }
-var honda = new Car('Honda', 'Accord', 1998);
+var nissan = new Car('Nissan', 'Altima', 2019);
 
 console.log(honda instanceof Car);//true
 console.log(honda instanceof Object);//true
 ```
 
 ### Summary:
-Honda is an instance of Car(class). Car is a prototype(real world). Honda is an object(real world).
+Nissan is an instance of Car(class). Car is a prototype(real world). Nissan is an object(real world).
