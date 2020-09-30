@@ -19,4 +19,4 @@ console.log(nissan instanceof Object);//true
 ```
 
 ### Summary:
-Nissan is an instance of Car(class). Car is a prototype(real world). Nissan is an object(real world).
+Nissan is an instance of a Car(class). Car is a prototype(real world). Nissan is an object(real world).
