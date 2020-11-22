@@ -19,3 +19,27 @@ function minChange(coins, length, total){
 const coins = [1,3,5,2];
 let total = 7;
 console.log(minChange(coins, coins.length, total));// 2; 5+2=7; 2 coins
+
+
+// Solution with Infinity
+function minChange(coins, length, total){
+    if(total === 0){ // base case
+        return 0;
+    }
+
+    let change = Infinity; // Maximum JS safest number; 2 types in JS(Number, BigInt)
+    // let change = 9007199254740991; //For larger integers, consider using BigInt.
+    for( let i=0; i<length; i++){
+        if(coins[i]<=total){//denomination <= total; 5 <= 7
+            let changePermutations = minChange(coins, length, total-coins[i]);
+            if(changePermutations != Infinity && changePermutations+1 < change){
+                change = changePermutations+1;
+            }
+        }
+    }
+    return change;
+}
+
+const coins = [1,3,5,2];
+let total = 7;
+console.log(minChange(coins, coins.length, total));// 2; 5+2=7; 2 coins
