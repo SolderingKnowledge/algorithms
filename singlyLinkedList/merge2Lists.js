@@ -10,11 +10,15 @@ function merge2Lists(a, b){
             curr.next = a;
             a = a.next;
         } else {
+            // counter = 0
             curr.next = b;
+            // counter++;
             b = b.next;
         }
+        // result.push(curr)
         curr = curr.next;
     }
+    // whichever is left push to result
     curr.next = a || b;
     return result.next;
 }
