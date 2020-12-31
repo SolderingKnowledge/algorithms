@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+}
+.item {
+    margin: 5px;
+    padding: 10px;
+    border: solid 1px;
+    background-color: bisque;
+}
