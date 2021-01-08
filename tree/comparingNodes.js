@@ -27,24 +27,22 @@ const comparingNodes = (dom, dom2, node)=>{
 
 
 
-// const dom = 
-//     <dom>
-//         <p>
-//             <span></span>//given node is this
-//         </p>
-//     </dom>
-
 const dom = {
-
+    dom: 
+    `<dom>
+        <p>
+        <span></span>//given node is this
+        </p>
+    </dom>`
 }
 
-// const dom2 = 
-//     <dom>
-//         <p>
-//             <h></h>
-//         </p>
-//     </dom>
-
 const dom2 = {
-    
+    dom: 
+    `<dom>
+        <p>
+        <h></h>
+        </p>
+    </dom>`
+
+
 }
