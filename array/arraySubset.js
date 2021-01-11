@@ -20,7 +20,29 @@ const subset = (first, second)=>{
     }
     return true;
   }
-  subset([1,2,3], [1,2]);
+subset([1,2,3], [1,2]);
+
+
+const subset2 = (first, second)=>{
+    const map = {};
+
+    first.forEach((el, idx)=>{
+        map[el] = map[el]++ || 1;
+    });
+
+    for(let i=0; i<second.length; i++){
+        if(map[second[i]]){
+            map[second[i]]--;
+        } else if(map[second[i]]<0){
+            return false
+        } else if(!map[second[i]]){
+            return false
+        }
+    }
+    return true;
+}
+console.log(subset2([1,2,3], [1,2,7]));
+
 
 
 /*
