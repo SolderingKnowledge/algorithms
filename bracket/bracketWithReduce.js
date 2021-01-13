@@ -13,3 +13,6 @@
 !7;//false
 !-7;//false
 !0;//true
+!""//true
+!" "//false
+!{}//false
