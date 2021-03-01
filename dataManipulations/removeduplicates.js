@@ -25,4 +25,16 @@ const joinWithoutDuplicates = (prev, next) => {
     }, {})
     return uniqueArray
 };
-console.log(joinWithoutDuplicates(prev, next))
+
+const joinWithoutDuplicates2 = (prev, next)=> {
+    const joined = prev.concat(next)
+    const removedDuplicates = []
+    joined.forEach((column)=> {
+        if(removedDuplicates.some((column2) => column2.name === column.name)){
+            removedDuplicates.push(column)
+        }
+    })
+    return removedDuplicates
+}
+
+console.log(joinWithoutDuplicates2(prev, next))
