@@ -3,40 +3,52 @@
 
 //     1 solution
 function largest(arr) {
-	var biggest = [];
+	var biggest = []
 	for (let i = 0; i < arr.length; i++) {
-		var first = arr[i][0]; //first el in 2D array
+		var first = arr[i][0] //first el in 2D array
 		for (let j = 0; j < arr[i].length; j++) {
-			var currentElement = arr[i][j]; //each el in 2D array
+			var currentElement = arr[i][j] //each el in 2D array
 			if (currentElement >= first) {
-				first = currentElement;
+				first = currentElement
 			}
 		}
-		biggest.push(first);
+		biggest.push(first)
 	}
-	return biggest;
+	return biggest
 }
 
-console.log(largest([ [ 2, 4 ], [ 5, 6 ], [ 8, 9 ] ]));
+console.log(
+	largest([
+		[2, 4],
+		[5, 6],
+		[8, 9],
+	])
+)
 
 //       2 solution
 function nest(arr) {
-	var biggest = arr[0];
+	var biggest = arr[0]
 	for (let i = 0; i < arr.length; i++) {
 		if (arr[i] > biggest) {
-			biggest = arr[i];
+			biggest = arr[i]
 		}
 	}
-	return biggest;
+	return biggest
 }
 
 function largest(arr) {
-	var biggest = [];
+	var biggest = []
 	for (var i = 0; i < arr.length; i++) {
-		var innerFunc = nest(arr[i]);
-		biggest.push(innerFunc);
+		var innerFunc = nest(arr[i])
+		biggest.push(innerFunc)
 	}
-	return biggest;
+	return biggest
 }
 
-console.log(largest([ [ 2, 4 ], [ 5, 6 ], [ 8, 9 ] ]));
+console.log(
+	largest([
+		[2, 4],
+		[5, 6],
+		[8, 9],
+	])
+)

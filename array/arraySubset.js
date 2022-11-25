@@ -8,42 +8,37 @@
 
 */
 
-
-
-const subset = (first, second)=>{
-    for(let i=0; i<second.length; i++){
-      let current = first.indexOf(second[i])
-      if(current === -1){
-        return false;
-      }
-      delete first[current]; 
-    }
-    return true;
-  }
-subset([1,2,3], [1,2]);
-
-
-const subset2 = (first, second)=>{
-    const map = {};
-
-    first.forEach((el, idx)=>{
-        map[el] = map[el]++ || 1;
-    });
-
-    for(let i=0; i<second.length; i++){
-        if(map[second[i]]){
-            map[second[i]]--;
-        } else if(map[second[i]]<0){
-            return false
-        } else if(!map[second[i]]){
-            return false
-        }
-    }
-    return true;
+const subset = (first, second) => {
+	for (let i = 0; i < second.length; i++) {
+		let current = first.indexOf(second[i])
+		if (current === -1) {
+			return false
+		}
+		delete first[current]
+	}
+	return true
 }
-console.log(subset2([1,2,3], [1,2,7]));
+subset([1, 2, 3], [1, 2])
 
+const subset2 = (first, second) => {
+	const map = {}
 
+	first.forEach((el, idx) => {
+		map[el] = map[el]++ || 1
+	})
+
+	for (let i = 0; i < second.length; i++) {
+		if (map[second[i]]) {
+			map[second[i]]--
+		} else if (map[second[i]] < 0) {
+			return false
+		} else if (!map[second[i]]) {
+			return false
+		}
+	}
+	return true
+}
+console.log(subset2([1, 2, 3], [1, 2, 7]))
 
 /*
 solution approach:
