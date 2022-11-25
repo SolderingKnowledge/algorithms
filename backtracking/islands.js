@@ -49,63 +49,65 @@
 //         }
 //       }
 //     }
-//     return count; 
+//     return count;
 //   }
-  
+
 //   const searching = (grid, x, y)=>{
 //     if(x<0 || x>=grid.length || y < 0 || y>=grid[0].length || grid[x][y]===0){//if everything is done, to stop the recursion
 //       return;
 //     }
-//     grid[x][y]=0;//start overiting once we count the island
+//     grid[x][y]=0;//start overriding once we count the islands
 //     searching(grid, x-1, y);//top column
 //     searching(grid,x+1, y);//bottom column
 //     searching(grid, x, y-1);//left row
 //     searching(grid, x, y+1);//right row
 //   }
-  
+
 //   islands([
 //     [1,0,0,0],
 //     [1,1,0,0],
 //     [0,0,0,0],
 //   ])
-  ////////////////////////////////////
-  function islands(grid) {
-    var count = 0;
-    for(var i = 0; i < grid.length; i++) {
-        for(var j = 0; j < grid[0].length; j++) {
-            if(grid[i][j] === '1') {//current element is "1"
+////////////////////////////////////
+function islands(grid) {
+	let count = 0
+	for (let i = 0; i < grid.length; i++) {
+		for (let j = 0; j < grid[0].length; j++) {
+			// island is present
+			if (grid[i][j] === '1') {
+				const stack = []
+				stack.push([i, j])
 
-                var stack = [];
-                stack.push([i, j]);
+				while (stack.length) {
+					//it will make sure we will visit all 4 sides
+					const pair = stack.pop()
+					i = pair[0]
+					j = pair[1]
 
-                while(stack.length) {//it will make sure we will visit all 4 sides
-                    var pair = stack.pop();
-                    i = pair[0];
-                    j = pair[1];
-                    
-                    if(i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] === '1') {
-                        grid[i][j] = '2';
-                        stack.push([i + 1, j]);//right
-                        stack.push([i - 1, j]);//left
-                        stack.push([i, j + 1]);//down
-                        stack.push([i, j - 1]);//up
-                    }
-                }
-                count++;
-            }
-        }
-    }
-    
-    return count;
-};
+					if (i >= 0 && i < grid.length && j >= 0 && j < grid[0].length && grid[i][j] === '1') {
+						grid[i][j] = '2'
+						stack.push([i + 1, j]) //right
+						stack.push([i - 1, j]) //left
+						stack.push([i, j + 1]) //down
+						stack.push([i, j - 1]) //up
+					}
+				}
+				count++
+			}
+		}
+	}
 
-console.log(islands([
-["1","1","1","1","0"],
-["1","1","0","1","0"],
-["1","1","0","0","0"],
-["0","0","0","0","0"]
-]));
+	return count
+}
 
+console.log(
+	islands([
+		['1', '1', '1', '1', '0'],
+		['1', '1', '0', '1', '0'],
+		['1', '1', '0', '0', '0'],
+		['0', '0', '0', '0', '0'],
+	])
+)
 
 /*
 high level:
@@ -113,4 +115,3 @@ high level:
   and on this each round search we will keep track(count)
   how many rounds searches we did.
 */
-
