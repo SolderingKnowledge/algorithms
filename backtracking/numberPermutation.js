@@ -43,7 +43,6 @@ const decreaseByOne = (number) => {
 
 console.log(decreaseByOne(5))
 /*
-
 num 5
 num 4
 num 3
@@ -61,5 +60,31 @@ number 4
 result 0
 number 5
 0
+*/
 
+const decreaseByOne2 = (number) => {
+	console.log('num', number)
+	if (!number) {
+		return number
+	}
+
+	decreaseByOne(number - 1)
+	console.log('number', number)
+	return number
+}
+
+console.log(decreaseByOne2(5))
+/*
+num 5
+num 4
+num 3
+num 2
+num 1
+num 0
+number 1
+number 2
+number 3
+number 4
+number 5
+5
 */
