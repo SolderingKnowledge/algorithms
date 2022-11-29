@@ -6,13 +6,13 @@ const permuteNumbers = (numbers) => {
 	const firstNumber = numbers[0]
 	const leftNumbers = numbers.slice(1)
 
-	const outFirstPerms = permuteNumbers(leftNumbers)
+	const perms = permuteNumbers(leftNumbers)
 
-	for (let i = 0; i < outFirstPerms.length; i++) {
-		for (let j = 0; j <= outFirstPerms[i].length; j++) {
-			permutations.push([...outFirstPerms[i].slice(0, j), firstNumber, ...outFirstPerms[i].slice(j)])
+	perms.forEach((nums) => {
+		for (let j = 0; j <= nums.length; j++) {
+			permutations.push([...nums.slice(0, j), firstNumber, ...nums.slice(j)])
 		}
-	}
+	})
 
 	return permutations
 }
