@@ -17,8 +17,10 @@ const permuteNumbers = (numbers) => {
 	return permutations
 }
 
+// Input:
 console.log(permuteNumbers([1, 2, 3]))
 /*
+Output:
 [
   [ 1, 2, 3 ],
   [ 2, 1, 3 ],
