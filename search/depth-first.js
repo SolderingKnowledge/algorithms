@@ -22,3 +22,15 @@ const graphDFS = {
 }
 
 dfs(graphDFS, 'A') // Output: A B D E F C
+
+// EXAMPLE 2
+const dfs = () => {
+	const visitedNodes = []
+	const traverse = (node) => {
+		visitedNodes.push(node)
+		if (node.left) traverse(node.left)
+		if (node.right) traverse(node.right)
+	}
+	traverse(this.root)
+	return visitedNodes
+}

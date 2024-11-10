@@ -29,3 +29,19 @@ const graphBFS = {
 }
 
 bfs(graphBFS, 'A') // Output: A B C D E F
+
+// EXAMPLE 2
+// Make use of Queue
+const bfs2 = () => {
+	const node = this.root
+	const visitedNodes = []
+	const queue = []
+	queue.push(node)
+	while (queue.length) {
+		node = queue.shift()
+		visitedNodes.push(node)
+		if (node.left) queue.push(node.left)
+		if (node.right) queue.push(node.right)
+	}
+	return visitedNodes
+}
