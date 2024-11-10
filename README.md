@@ -1,4 +1,3 @@
 # Algorithms
 
-    Algorithms will help you to approach to a problem in multiple ways and to find more effective ways to solve it.
-    Learning algorithms will help you in many ways to grow as an engineer.
+Algorithms help you approach problems in multiple ways and find more efficient solutions. Learning them is essential for growth as an engineer.
